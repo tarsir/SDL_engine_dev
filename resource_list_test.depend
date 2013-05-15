@@ -1,10 +1,10 @@
 # depslib dependency file v1.0
-1366424799 source:/home/stephen/Desktop/Programming/C++/Silly shit/resource_list/main.cpp
+1368642160 source:/home/stephen/Desktop/Programming/C++/Silly shit/resource_list/main.cpp
 	"general.h"
 	<random>
 	<chrono>
 
-1366396456 /home/stephen/Desktop/Programming/C++/Silly shit/resource_list/general.h
+1368642117 /home/stephen/Desktop/Programming/C++/Silly shit/resource_list/general.h
 	<iostream>
 	"SDL.h"
 	"SDL_image.h"
@@ -23,6 +23,9 @@
 	"files.h"
 	"resourcemanager.h"
 	"music.h"
+	"graphics.h"
+	"object.h"
+	"timing.h"
 
 1327665706 /usr/include/SDL/SDL.h
 	"SDL_main.h"
@@ -215,7 +218,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1365779297 /home/stephen/Desktop/Programming/C++/Silly shit/resource_list/point.h
+1368632503 /home/stephen/Desktop/Programming/C++/Silly shit/resource_list/point.h
 	"general.h"
 
 1366383964 /home/stephen/Desktop/Programming/C++/Silly shit/resource_list/files.h
@@ -233,10 +236,21 @@
 1327665706 /usr/include/SDL/SDL_types.h
 	"SDL_stdinc.h"
 
-1366396791 /home/stephen/Desktop/Programming/C++/Silly shit/resource_list/resourcemanager.h
+1368640931 /home/stephen/Desktop/Programming/C++/Silly shit/resource_list/resourcemanager.h
 	"general.h"
+	"time.h"
 
-1366428616 /home/stephen/Desktop/Programming/C++/Silly shit/resource_list/music.h
+1368548923 /home/stephen/Desktop/Programming/C++/Silly shit/resource_list/music.h
 	"general.h"
 	"SDL_mixer.h"
+
+1368642117 /home/stephen/Desktop/Programming/C++/Silly shit/resource_list/graphics.h
+	"general.h"
+
+1368650787 /home/stephen/Desktop/Programming/C++/Silly shit/resource_list/object.h
+	"general.h"
+	"point.h"
+
+1368635849 /home/stephen/Desktop/Programming/C++/Silly shit/resource_list/timing.h
+	"general.h"
 

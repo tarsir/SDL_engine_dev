@@ -44,11 +44,13 @@
 		<Unit filename="cb.bmp" />
 		<Unit filename="files.h" />
 		<Unit filename="general.h" />
+		<Unit filename="graphics.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="music.h" />
 		<Unit filename="object.h" />
 		<Unit filename="point.h" />
 		<Unit filename="resourcemanager.h" />
+		<Unit filename="timing.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

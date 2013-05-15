@@ -36,9 +36,13 @@ Mix_Music* musicLoad(string filename) {
 
 bool playNewMusic() {
 	if (Mix_PlayingMusic() == 0) {
-		Mix_Music* thisSong = resources->findMusicByCount();
-		if (Mix_PlayMusic(thisSong, 1) == -1) {
-			return false;
+		Resource<Mix_Music> thisSong = resources->findMusicRsrcByCount();
+		//std::cin.get();
+		if (thisSong.getResource() != NULL) {
+			if (Mix_PlayMusic(thisSong.getResource(),-1) == -1) {
+				std::cin.get();
+				return false;
+			}
 		}
 	}
 	return true;

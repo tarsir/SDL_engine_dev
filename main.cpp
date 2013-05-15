@@ -12,10 +12,14 @@ enum Terrain {
 	SAND
 };
 
+SDL_Surface* findSpriteByLabel(string);
+
 int main() {
 	int cols, rows = cols = 10;
 	startup();
-	playNewMusic();
+	std::cin.get();
+	//playNewMusic();
+	std::cin.get();
 
 	for (int i = 0; i < imageList.size(); i++) {
 		std::cout << imageList[i].label << endl;
@@ -34,7 +38,7 @@ int main() {
 		i++;
 		SDL_Delay(1000);
 	}*/
-	int loc;
+//	int loc;
 
 	testMap = new char*[rows];
 	for (i = 0; i < 10; i++) {
@@ -95,7 +99,33 @@ int main() {
 		std::cout << std::endl;
 	}
 
+	printf("Putting little dude...somewhere\n");
+	int x = getRand(SCRN_WIDTH/2, SCRN_WIDTH), y = getRand(SCRN_HEIGHT/2, SCRN_HEIGHT);
+	Character *duder = new Character(new Point(x,y), true, "littledude");
+	MovingObject *ball = new MovingObject(new Point(SCRN_WIDTH/2, 0), "ball", 5, 9);
+	while (true) {
+		fps.start();
+		clearScreen();
+		duder->update();
+		ball->update();
+		duder->draw();
+		ball->draw();
+		while (SDL_PollEvent(&event)) {
+			duder->handle_input();
+			if (event.type == SDL_QUIT) {
+				exit(0);
+			}
+		}
+		duder->displayInfo();
+		refresh(screen);
+		frame++;
+		fpsDelay();
+	}
 
+	makeText("ermahgurd");
+
+	refresh(screen);
+	std::cin.get();
 	/*for (i = 0; i < 10; i++) {
 		loc = generator() % imageList.size();
 		apply_surface(i*32, 0, (imageList[loc].resource), screen);
